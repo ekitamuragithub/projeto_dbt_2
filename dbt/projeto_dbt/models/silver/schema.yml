@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: silver_pedidos_completos
+    description: "Modelo integrado com informações completas dos pedidos, clientes e pagamentos."
+    columns:
+      - name: id_pedido
+        tests:
+          - not_null
+
+      - name: id_cliente
+        tests:
+          - not_null
+      - name: valor_pagamento
+        tests:
+          - not_null

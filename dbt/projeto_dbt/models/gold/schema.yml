@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: gold_faturamento_clientes
+    description: "Faturamento agregado por cliente com total de pedidos e ticket médio."
+    columns:
+      - name: id_cliente
+        tests:
+          - not_null
+          - unique
+      - name: total_pedidos
+        tests:
+          - not_null
+      - name: total_pago
+        tests:
+          - not_null
+
+  - name: gold_evolucao_faturamento_mensal
+    description: "Faturamento mensal agregado por data de pedido."
+    columns:
+      - name: mes
+        tests:
+          - not_null
+          - unique
+      - name: faturamento_mensal
+        tests:
+          - not_null
